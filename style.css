@@ -1,0 +1,171 @@
+.main {
+	background: url(img/Background.png);
+	background-size: cover;
+	background-attachment: fixed;
+	width: 1745px;
+	height: 1164px;
+	position: relative;
+}
+.selection {
+	padding: 20px;
+	
+}
+.selection__title {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 57px;
+	line-height: 67px;
+	color:  #FFFFFF;
+}
+.selection__subtitle {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 22px;
+	color:  #FFFFFF;
+}
+.selection__rectangle {
+	width: 18px;
+	height: 18px;
+	visibility: hidden;
+}
+.selection__simple, .selection__middle, .selection__hard {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 59px;
+	color:  #FFFFFF;	
+	
+}
+.selection__btn {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 37px;
+	color:  #FFFFFF;
+	background: #D62B2E;
+	border-radius: 7px;
+	width: 352px;
+	height: 95px;
+}
+.cards {
+
+	padding: 20px;
+}
+.cards__first, .cards__second {
+	height: 341;
+	width: 218;
+}
+.cards__first {
+	transform: rotate(11.9deg);
+}
+.cards__second {
+	transform: rotate(39.26deg);
+}
+
+.three {
+	display: flex;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	perspective: 1000px;
+}
+.three__cards {
+	position: relative;
+	width: 218px;
+	height: 341px;
+	margin-right: 20px;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+.three__back {
+	transform: rotateY(180deg);
+}
+.three__front, .three__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.change-sides {
+	transform: rotateY(180deg);
+}
+.three__cards:active {
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+  transform: rotate(-3.08deg);
+}
+
+.six {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+.six__cards {
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	width: 218px;
+	height: 341px;
+	position: relative;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.six__front, .six__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.six__back {
+	transform: rotateY(180deg);
+}
+.six__cards:active {
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+  transform: rotate(-3.08deg);
+}
+
+.nine {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+.nine__cards {
+	width: 218px;
+	height: 341px;
+	position: relative;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+.nine__front, .nine__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.nine__back {
+	transform: rotateY(180deg);
+}
+.nine__cards:active {
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+  transform: rotate(-3.08deg);
+}
+/* 
+.your__choice {
+	transform: rotate(-3.08deg);
+}*/
+
+
