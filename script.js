@@ -3,107 +3,69 @@ let middle = document.getElementById('middle');
 let hard = document.getElementById('hard');
 let choice = document.querySelectorAll('.selection__level');
 let btn = document.querySelector('.selection__btn');
-let cards = document.querySelectorAll('.game__cards');
-let six = document.querySelectorAll('.cardsSix');
-let three = document.querySelectorAll('.cardsThree');
 let haveFlippedCard = false;
 let	yourCard;
-let level;
-let picture1 = document.querySelector('.selection__rectangular');
-let picture2 = document.querySelector('.selection__rectangul');
-let picture3 = document.querySelector('.selection__rectan');
-
-// выбор сложности
+let level = 3;
 
 function yourChoice() {
-	if (!level) {
+	simple.classList.remove('active');
+	middle.classList.remove('active');
+	hard.classList.remove('active');
 	this.classList.add('active');
-	choice = this;
-	level = true;
-	//picture.forEach(elm => elm.classList.remove('hidden'));
+	level = this.getAttribute('value');
 	}
-  } 
+
 choice.forEach (elm => elm.addEventListener("click", yourChoice));
 
-if (choice == 'simple') {
-	picture1.classList.remove('hidden');
-	three.forEach(elm => elm.classList.toggle('hidden'));	
-	cards.forEach(elem => {
-		var randomCard = Math.floor(Math.random() * 3);
-	});		
-} else if (choice == 'middle') {
-	picture2.classList.remove('hidden');	
-	six.forEach(elm => elm.classList.toggle('hidden'));
-	cards.forEach(elem => {
-		var randomCard = Math.floor(Math.random() * 6);
-	});
-} else if (choice == 'hard') {
-	picture3.classList.remove('hidden');
-	cards.forEach(elem => {
-		var randomCard = Math.floor(Math.random() * 9);
-	});	
-}
+document.querySelector('#start__game').onclick = () => {
+	document.body.innerHTML = '<main class="main"><section class="game"></section></main>'
 
-btn.onclick = function() {window.location.href='three.html';}
-
-// нажатие на кнопку
-/*
-btn.onclick = function () {
-	if (choice == simple) {
-		window.location.href='three.html';
-		three.forEach(elm => elm.classList.toggle('hidden'));	
-			//change();
-	} else if (choice == middle) {
-		window.location.href='three.html';
-		 six.forEach(elm => elm.classList.toggle('hidden'));
-			//change();
-	} else {
-		window.location.href='three.html';
-		//change();
+	function createCard() {
+		let card = document.createElement("div");
+		card.innerHTML = '<div class="game__cards"><img class="card__front" src="img/playing_card.png" alt="playing_card"><img class="card__back" src="img/game_over.png" alt="game_over"></div>';
+		document.querySelector('.game').appendChild(card)
 	}
-};
-*/
-// смена сторон карты  и возврат на главную страницу
+	for (let i = 0; i < level; i++) {
+	createCard()
+	}
 
-function flipCard() {
-	this.classList.toggle('change-sides');
-	if (!haveFlippedCard) {
-		haveFlippedCard = true;
-		yourCard = this;
-	} 
-	checkCard();
-}
+	function random() {
+		return Math.floor(Math.random()* level)
+	}
+	const rand = random();
 
-function checkCard() {
-	if (haveFlippedCard = true) {
-		yourCard.onclick = function () {	
-			window.location.href ='index.html';
+	document.querySelectorAll('.card__back').forEach((item, index) => {
+		if(index == rand) {
+			item.src ="img/bug.png"
+		}
+	})
+
+	function flipCard() {
+		if (!haveFlippedCard) {
+			this.classList.toggle('change-sides');
+			haveFlippedCard = true;
+			
+			yourCard = this;
+		} 
+		checkCard();
+	}
+
+	function checkCard() {
+		if (haveFlippedCard === true) {
+			yourCard.onclick = function () {	
+				window.location.href ='index.html';
+			}
 		}
 	}
-}
+	
+	document.querySelectorAll('.game__cards').forEach(elem => elem.addEventListener("click", flipCard));
 
-cards.forEach(elem => elem.addEventListener("click", flipCard));
+};
 
-// перемешивание карт
-/*
-function change() {
-	if (choice == simple) {
-	cards.forEach(elem => {
-		var randomCard = Math.floor(Math.random() * 3);
-	});
-	}
-	if (choice == middle) {
-	cards.forEach(elem => {
-		var randomCard = Math.floor(Math.random() * 6);
-	});
-	}
-	if (choice == hard) {
-	cards.forEach(elem => {
-		var randomCard = Math.floor(Math.random() * 9);
-	});
-	}
-}
-*/
+
+
+
+
 
 
 
