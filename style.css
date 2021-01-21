@@ -1,15 +1,13 @@
 
 body {
 	margin: 0;
-	width: auto;
 }
 .main {
 	background: url(img/Background.png);
 	background-size: cover;
 	background-attachment: fixed;
-	width: 1745px;
-	height: 1164px;
 	position: relative;
+	overflow: hidden;
 }
 .select {
 	padding: 60px;
@@ -19,19 +17,14 @@ body {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 57px;
-	line-height: 67px;
 	color:  #FFFFFF;
 }
 .select__subtitle {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 19px;
-	line-height: 22px;
 	color:  #FFFFFF;
 	margin-top: -35px;
-	margin-bottom: 87px;
 }
 .selection {
 	position: absolute;
@@ -42,8 +35,6 @@ body {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 50px;
-	line-height: 59px;
 	color:  #FFFFFF;		
 }
 .active {
@@ -57,42 +48,27 @@ body {
 	content:"";
 	background-color: transparent;	
     transform: rotate(45deg);
-	width: 18px;
-	height: 18px;
 }
 .active:before {
 	display: block;
 	content:"";
 	background-color: red;	
     transform: rotate(45deg);
-	width: 18px;
-	height: 18px;
 }
 .selection__btn {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 32px;
-	line-height: 37px;
 	color:  #FFFFFF;
 	background: #D62B2E;
 	border-radius: 7px;
-	width: 352px;
-	height: 95px;
-	margin-top: 80px;
 }
 .cards {
 	position: absolute;
-	right: 450px;
-	bottom: 150px;
 	padding: 20px;
-	width: 600px;
 	height: auto;
 }
-.cards__first, .cards__second {
-	height: 341;
-	width: 218;
-}
+
 .cards__first {
 	transform: rotate(11.9deg);
 }
@@ -111,8 +87,6 @@ body {
 }
 .game__cards {
 	position: relative;
-	width: 218px;
-	height: 341px;
 	margin-right: 20px;
 	margin-bottom: 20px;
 	transition: transform 0.8s;
@@ -131,12 +105,176 @@ body {
 	transform: rotateY(180deg);
 }
 .game__cards:active {
-  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
-  transform: rotate(-3.08deg);
+ 	filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+ 	transform: rotate(-3.08deg);
 }
 .hidden {
-	 display: none;
+	display: none;
+}
+@media only screen and (min-width: 1367px) {
+	.main {
+		width: 1745px;
+		height: 1164px;
+	}
+	.select__title {
+		font-size: 57px;
+		line-height: 67px;
+	}
+	.select__subtitle {
+		font-size: 19px;
+		line-height: 22px;
+		margin-top: -35px;
+	}
+	.selection {
+		position: absolute;
+		padding-left: 60px;
+	}
+	.selection__level {
+		font-size: 50px;
+		line-height: 59px;	
+	}
+	.selection__btn {
+		font-size: 32px;
+		line-height: 37px;
+		width: 352px;
+		height: 95px;
+		margin-top: 80px;
+	}
+	.cards__first, .cards__second {
+		height: 341;
+		width: 218;
+	}
+	.game__cards {
+		width: 218px;
+		height: 341px;
+	}
+	.cards {
+		right: 200px;
+		bottom: 150px;
+		width: 600px;
+	}
+	.selection__level:before {
+		width: 18px;
+		height: 18px;
+	}
+	.active:before {
+		width: 18px;
+		height: 18px;
+	}
 }
 
-
-
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+	.main {
+		width: 1366px;
+		height: 1164px;
+	}
+	.select__title {
+		font-size: 50px;
+		line-height: 62px;
+	}
+	.select__subtitle {
+		font-size: 17px;
+		line-height: 25px;
+		margin-top: -35px;
+	}
+	.select {
+		padding-bottom: 0;
+		padding-left: 50px;
+	}
+	.selection {
+		padding-left: 50px;
+	}
+	.selection__level {
+		font-size: 45px;
+		line-height: 41px;		
+	}
+	.selection__btn {
+		font-size: 39px;
+		line-height: 23px;
+		width: 290px;
+		height: 88px;
+		margin-top: 34px;
+	}
+	.cards__first, .cards__second {
+		height: 300px;
+		width: 188px;
+	}
+	.game__cards {
+		width: 188px;
+		height: 300px;
+	}
+	.cards {
+		right: 245px;
+		bottom: 296px;
+		padding: 20px;
+		width: 460px;
+	}
+	.selection__level:before {
+		width: 15px;
+		height: 15px;
+	}
+	.active:before {
+		width: 15px;
+		height: 15px;
+	}
+}
+@media only screen and (min-width: 365px) and (max-width: 767px) {
+	.main {
+		width: 767px;
+		height: 1164px;
+	}
+	.select__title {
+		font-size: 46px;
+		line-height: 58px;
+	}
+	.select__subtitle {
+		font-size: 23px;
+		line-height: 22px;
+		margin-top: -23px;
+	}
+	.select {
+		padding-bottom: 0;
+		padding-left: 30px;
+	}
+	.selection {
+		padding-left: 30px;
+	}
+	.selection__level {
+		font-size: 44px;
+		line-height: 39px;	
+	}
+	.selection__btn {
+		font-size: 32px;
+		line-height: 37px;
+		width: 352px;
+		height: 95px;
+		margin-top: 27px;
+	}
+	.cards__first, .cards__second {
+		height: 300;
+		width: 200;
+	}
+	.game {
+    	left: 24%;
+    	top: 25%;
+    	transform: translate(-14%, -19%);
+}
+	.game__cards {
+		width: 172px;
+		height: 291px;
+	}
+	.cards {
+		right: 63px;
+		bottom: 98px;
+		padding: 20px;
+		width: 500px;
+	}
+	.selection__level:before {
+		width: 11px;
+		height: 11px;
+	}
+	.active:before {
+		width: 11px;
+		height: 11px;
+	}
+}
