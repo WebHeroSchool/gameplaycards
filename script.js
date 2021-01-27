@@ -22,7 +22,8 @@ document.querySelector('#start__game').onclick = () => {
 
 	function createCard() {
 		let card = document.createElement("div");
-		card.innerHTML = '<div class="game__cards"><img class="card__front" src="img/playing_card.png" alt="playing_card"><img class="card__back" src="img/game_over.png" alt="game_over"></div>';
+		card.className = "game__cards";
+		card.innerHTML = '<img class="card__front" src="img/playing_card.png" alt="playing_card"><img class="card__back" src="img/game_over.png" alt="game_over">';
 		document.querySelector('.game').appendChild(card)
 	}
 	for (let i = 0; i < level; i++) {

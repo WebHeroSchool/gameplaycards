@@ -6,12 +6,12 @@ body {
 	background: url(img/Background.png);
 	background-size: cover;
 	background-attachment: fixed;
-	position: relative;
-	overflow: hidden;
+	width: 100%;
+	height: 1164px;
 }
 .select {
 	padding: 60px;
-	
+	height: auto;
 }
 .select__title {
 	font-family: Roboto;
@@ -27,7 +27,8 @@ body {
 	margin-top: -35px;
 }
 .selection {
-	position: absolute;
+	position: relative;
+	margin-bottom: 20px;
 }
 .selection__level {
 	display: flex;
@@ -64,25 +65,22 @@ body {
 	border-radius: 7px;
 }
 .cards {
-	position: absolute;
+	display: flex;
+	position: relative;
 	padding: 20px;
-	height: auto;
+	justify-content: center;
+    align-items: center;
 }
-
 .cards__first {
 	transform: rotate(11.9deg);
 }
 .cards__second {
 	transform: rotate(39.26deg);
 }
-
 .game {
 	display: flex;
 	flex-wrap: wrap;
 	position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 	perspective: 1000px;
 }
 .game__cards {
@@ -112,10 +110,6 @@ body {
 	display: none;
 }
 @media only screen and (min-width: 1367px) {
-	.main {
-		width: 1745px;
-		height: 1164px;
-	}
 	.select__title {
 		font-size: 57px;
 		line-height: 67px;
@@ -124,10 +118,6 @@ body {
 		font-size: 19px;
 		line-height: 22px;
 		margin-top: -35px;
-	}
-	.selection {
-		position: absolute;
-		padding-left: 60px;
 	}
 	.selection__level {
 		font-size: 50px;
@@ -138,7 +128,7 @@ body {
 		line-height: 37px;
 		width: 352px;
 		height: 95px;
-		margin-top: 80px;
+		margin-top: 42px;
 	}
 	.cards__first, .cards__second {
 		height: 341;
@@ -148,10 +138,14 @@ body {
 		width: 218px;
 		height: 341px;
 	}
+	.game {
+    	left: 47%;
+    	top: 50%;
+    	transform: translate(-50%, -50%);
+	}
 	.cards {
-		right: 200px;
-		bottom: 150px;
-		width: 600px;
+		width: 50%;	
+		height: 400px;
 	}
 	.selection__level:before {
 		width: 18px;
@@ -164,12 +158,8 @@ body {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
-	.main {
-		width: 1366px;
-		height: 1164px;
-	}
 	.select__title {
-		font-size: 50px;
+		font-size: 45px;
 		line-height: 62px;
 	}
 	.select__subtitle {
@@ -178,10 +168,6 @@ body {
 		margin-top: -35px;
 	}
 	.select {
-		padding-bottom: 0;
-		padding-left: 50px;
-	}
-	.selection {
 		padding-left: 50px;
 	}
 	.selection__level {
@@ -199,15 +185,18 @@ body {
 		height: 300px;
 		width: 188px;
 	}
+	.game {
+    	left: 23%;
+    	top: 39%;
+    	transform: translate(-11%, -44%);
+   	}
 	.game__cards {
-		width: 188px;
-		height: 300px;
+		width: 173px;
+    	height: 272px;
 	}
 	.cards {
-		right: 245px;
-		bottom: 296px;
-		padding: 20px;
-		width: 460px;
+    	width: 80%;
+    	height: 382px;
 	}
 	.selection__level:before {
 		width: 15px;
@@ -219,10 +208,6 @@ body {
 	}
 }
 @media only screen and (min-width: 365px) and (max-width: 767px) {
-	.main {
-		width: 767px;
-		height: 1164px;
-	}
 	.select__title {
 		font-size: 46px;
 		line-height: 58px;
@@ -233,41 +218,35 @@ body {
 		margin-top: -23px;
 	}
 	.select {
-		padding-bottom: 0;
 		padding-left: 30px;
 	}
-	.selection {
-		padding-left: 30px;
-	}
+	
 	.selection__level {
-		font-size: 44px;
-		line-height: 39px;	
+		font-size: 39px;
+		line-height: 26px;	
 	}
 	.selection__btn {
 		font-size: 32px;
 		line-height: 37px;
-		width: 352px;
+		width: 288px;
 		height: 95px;
-		margin-top: 27px;
+		margin-top: 19px;
 	}
 	.cards__first, .cards__second {
 		height: 300;
 		width: 200;
 	}
 	.game {
-    	left: 24%;
+    	left: 23%;
     	top: 25%;
     	transform: translate(-14%, -19%);
 }
 	.game__cards {
-		width: 172px;
-		height: 291px;
+		width: 124px;
+    	height: 182px;
 	}
 	.cards {
-		right: 63px;
-		bottom: 98px;
-		padding: 20px;
-		width: 500px;
+		display: none;
 	}
 	.selection__level:before {
 		width: 11px;
