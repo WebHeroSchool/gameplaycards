@@ -7,7 +7,7 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	width: 100%;
-	height: 1164px;
+	height: 100vh;
 }
 .select {
 	padding: 60px;
@@ -26,9 +26,14 @@ body {
 	color:  #FFFFFF;
 	margin-top: -35px;
 }
+.section {
+	display: flex;
+	height: 100vh;
+}
 .selection {
+	height: auto;
 	position: relative;
-	margin-bottom: 20px;
+	width: 50%;
 }
 .selection__level {
 	display: flex;
@@ -65,6 +70,8 @@ body {
 	border-radius: 7px;
 }
 .cards {
+	width: 50%;
+	height: auto;
 	display: flex;
 	position: relative;
 	padding: 20px;
@@ -143,10 +150,6 @@ body {
     	top: 50%;
     	transform: translate(-50%, -50%);
 	}
-	.cards {
-		width: 50%;	
-		height: 400px;
-	}
 	.selection__level:before {
 		width: 18px;
 		height: 18px;
@@ -169,34 +172,37 @@ body {
 	}
 	.select {
 		padding-left: 50px;
+		padding-right: 13px;
 	}
 	.selection__level {
 		font-size: 45px;
 		line-height: 41px;		
 	}
+	.selection {
+		width: 40%;
+	}
 	.selection__btn {
 		font-size: 39px;
 		line-height: 23px;
-		width: 290px;
+		width: 268px;
 		height: 88px;
 		margin-top: 34px;
 	}
+	.cards {
+		width: 55%;
+	}
 	.cards__first, .cards__second {
-		height: 300px;
-		width: 188px;
+		height: 222px;
+		width: 147px;
 	}
 	.game {
-    	left: 23%;
-    	top: 39%;
-    	transform: translate(-11%, -44%);
+    	left: 24%;
+    	top: 46%;
+    	transform: translate(-14%, -44%);
    	}
 	.game__cards {
 		width: 173px;
     	height: 272px;
-	}
-	.cards {
-    	width: 80%;
-    	height: 382px;
 	}
 	.selection__level:before {
 		width: 15px;
@@ -207,18 +213,19 @@ body {
 		height: 15px;
 	}
 }
-@media only screen and (min-width: 365px) and (max-width: 767px) {
+@media only screen and (min-width: 375px) and (max-width: 767px) {
 	.select__title {
-		font-size: 46px;
-		line-height: 58px;
+		font-size: 39px;
+		line-height: 43px;
 	}
 	.select__subtitle {
 		font-size: 23px;
 		line-height: 22px;
-		margin-top: -23px;
+		margin-top: -6px;
 	}
 	.select {
 		padding-left: 30px;
+		padding-top: 20px;
 	}
 	
 	.selection__level {
@@ -232,18 +239,14 @@ body {
 		height: 95px;
 		margin-top: 19px;
 	}
-	.cards__first, .cards__second {
-		height: 300;
-		width: 200;
-	}
 	.game {
-    	left: 23%;
-    	top: 25%;
+    	left: 21%;
+    	top: 21%;
     	transform: translate(-14%, -19%);
 }
 	.game__cards {
-		width: 124px;
-    	height: 182px;
+		width: 120px;
+    	height: 140px;
 	}
 	.cards {
 		display: none;
