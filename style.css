@@ -204,7 +204,7 @@ body {
    	}
 	.game__cards {
 		width: 173px;
-    	height: 272px;
+    	height: 246px;
 	}
 	.selection__level:before {
 		width: 15px;
@@ -243,13 +243,14 @@ body {
 	}
 	.game {
 		max-width: 559px;
-    	left: 21%;
+    	left: 20%;
     	top: 21%;
     	transform: translate(-14%, -19%);
 }
 	.game__cards {
 		width: 120px;
-    	height: 140px;
+    	height: 135px;
+    	margin-bottom: 10px;
 	}
 	.cards {
 		display: none;
