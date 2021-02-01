@@ -142,8 +142,8 @@ body {
 		width: 218;
 	}
 	.game__cards {
-		width: 218px;
-		height: 341px;
+		width: 188px;
+		height: 268px;
 	}
 	.game {
 		max-width: 950px;
@@ -197,14 +197,14 @@ body {
 		width: 147px;
 	}
 	.game {
-		max-width: 770px;
-    	left: 24%;
-    	top: 46%;
-    	transform: translate(-14%, -44%);
+		max-width: 631px;
+    	left: 34%;
+    	top: 50%;
+    	transform: translate(-25%, -50%);
    	}
 	.game__cards {
-		width: 173px;
-    	height: 246px;
+		width: 138px;
+    	height: 190px;
 	}
 	.selection__level:before {
 		width: 15px;
@@ -242,15 +242,14 @@ body {
 		margin-top: 19px;
 	}
 	.game {
-		max-width: 559px;
-    	left: 20%;
-    	top: 21%;
-    	transform: translate(-14%, -19%);
+		max-width: 491px;
+    	left: 34%;
+    	top: 50%;
+    	transform: translate(-23%, -50%);
 }
 	.game__cards {
-		width: 120px;
-    	height: 135px;
-    	margin-bottom: 10px;
+		width: 103px;
+    	height: 120px;
 	}
 	.cards {
 		display: none;
