@@ -229,15 +229,17 @@ body {
 		padding-left: 30px;
 		padding-top: 20px;
 	}
-	
+	.selection {
+		width: 100%;
+	}
 	.selection__level {
-		font-size: 39px;
+		font-size: 32px;
 		line-height: 26px;	
 	}
 	.selection__btn {
-		font-size: 32px;
+		font-size: 30px;
 		line-height: 37px;
-		width: 288px;
+		width: 241px;
 		height: 95px;
 		margin-top: 19px;
 	}
