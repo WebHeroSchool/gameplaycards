@@ -244,13 +244,13 @@ body {
 		margin-top: 19px;
 	}
 	.game {
-		max-width: 459px;
-    	left: 34%;
+		max-width: 321px;
+    	left: 42%;
     	top: 50%;
-    	transform: translate(-23%, -50%);
+    	transform: translate(-34%, -50%);
 	}
 	.game__cards {
-		width: 95px;
+		width: 87px;
     	height: 112px;
 	}
 	.cards {
@@ -294,13 +294,13 @@ body {
 		margin-top: 19px;
 	}
 	.game {
-		max-width: 491px;
+		max-width: 174px;
     	left: 41%;
     	top: 50%;
     	transform: translate(-32%, -50%);
 	}
 	.game__cards {
-		width: 74px;
+		width: 67px;
     	height: 89px;
 	}
 	.cards {
