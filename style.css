@@ -109,9 +109,14 @@ body {
 .change-sides {
 	transform: rotateY(180deg);
 }
-.game__cards:active {
+/*.game__cards:active {
  	filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
  	transform: rotate(-3.08deg);
+}*/
+.game__cards:hover {
+ 	filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+ 	transform: rotate(-3.08deg);
+ 	cursor: pointer;
 }
 .hidden {
 	display: none;
