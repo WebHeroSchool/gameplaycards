@@ -41,8 +41,10 @@ body {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	color:  #FFFFFF;		
+	color:  #FFFFFF;
+	cursor: pointer;		
 }
+
 .active {
 	color: red;
 }
@@ -109,14 +111,13 @@ body {
 .change-sides {
 	transform: rotateY(180deg);
 }
-/*.game__cards:active {
- 	filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
- 	transform: rotate(-3.08deg);
-}*/
 .game__cards:hover {
+ 	cursor: pointer;
+}
+.card__front:hover {
  	filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
  	transform: rotate(-3.08deg);
- 	cursor: pointer;
+ 	
 }
 .hidden {
 	display: none;
